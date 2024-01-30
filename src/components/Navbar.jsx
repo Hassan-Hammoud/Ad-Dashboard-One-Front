@@ -111,6 +111,9 @@ const Navbar = ({ user, setIsSidebarOpen, isSidebarOpen }) => {
               open={isOpen}
               onClose={handleClose}
               anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+              // backgroundColor={theme.palette.secondary[300]}
+              // color={theme.palette.secondary[300]}
+              // sx={{ backgroundColor: theme.palette.secondary[300] }}
             >
               <MenuItem onClick={handleClose}>Log Out</MenuItem>
             </Menu>
