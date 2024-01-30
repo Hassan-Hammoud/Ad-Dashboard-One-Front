@@ -27,11 +27,9 @@ const Navbar = ({ setIsSidebarOpen, isSidebarOpen }) => {
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Left Side  */}
         <FlexBetween>
-          {!isSidebarOpen && (
-            <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-              <MenuIcon />
-            </IconButton>
-          )}
+          <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+            <MenuIcon />
+          </IconButton>
 
           <FlexBetween
             backgroundColor={theme.palette.background.alt}
