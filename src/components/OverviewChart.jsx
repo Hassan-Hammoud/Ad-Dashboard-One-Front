@@ -146,7 +146,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
                   {
                     on: "hover",
                     style: {
-                      itemBackground: theme.palette.secondary[200],
+                      itemBackground: "rgba(0, 0, 0, .03)",
                       itemOpacity: 1,
                     },
                   },
