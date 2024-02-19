@@ -84,6 +84,7 @@ const Navbar = ({ user, setIsSidebarOpen, isSidebarOpen }) => {
                 width="32px"
                 borderRadius="50%"
                 sx={{ objectFit: "cover" }}
+                className="image-profile"
               />
 
               <Box textAlign="left">
