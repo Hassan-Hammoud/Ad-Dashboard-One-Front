@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { Box, useTheme } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import Header from "components/Header";
 import { ResponsiveLine } from "@nivo/line";
 import { useGetSalesQuery } from "state/api";
@@ -46,13 +46,19 @@ const Daily = () => {
     const formattedData = [totalSalesLine, totalUnitsLine];
     return [formattedData];
   }, [data, startDate, endDate]); // eslint-disable-line react-hooks/exhaustive-deps
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   return (
     <Box m="1.5rem 2.5rem">
       <Header title="DAILY SALES" subtitle="Chart Of Daily Sales" />
       <Box height="75vh">
-        <Box display="flex" justifyContent="flex-end">
-          <Box>
+        <Box
+          display="flex"
+          sx={{ flexDirection: isMobile ? "column" : "row" }}
+          justifyContent="flex-end"
+          mt="0.5rem"
+        >
+          <Box mb="0.5rem" mr="0.5rem">
             <DatePicker
               selected={startDate}
               onChange={(date) => setStartDate(date)}
