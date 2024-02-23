@@ -31,7 +31,6 @@ import {
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
-import profileImage from "assets/Hassan.png";
 
 const navItems = [
   {
@@ -99,6 +98,7 @@ const Sidebar = ({
   setIsSidebarOpen,
   isNonMobile,
 }) => {
+  const profileImg = "https://i.ibb.co/cyj1L1Z/Hassan.webp";
   const { pathname } = useLocation();
   const [active, setActive] = useState("");
   const navigate = useNavigate();
@@ -193,13 +193,13 @@ const Sidebar = ({
             </List>
           </Box>
 
-          <Box position="absolute" bottom="2rem">
+          <Box position="relative" bottom="0.4rem">
             <Divider />
             <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
               <Box
                 component="img"
                 alt="profile"
-                src={profileImage}
+                src={profileImg}
                 height="40px"
                 width="40px"
                 borderRadius="50%"
